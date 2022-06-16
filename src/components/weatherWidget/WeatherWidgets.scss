@@ -1,0 +1,84 @@
+.weather-widget{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(250,250,250,0.1);
+    backdrop-filter: blur(15px);
+    p{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        color: white;
+        .weather-head{
+                justify-content: space-between;
+                display: flex;
+                .js-c{
+                    display: flex;
+                    align-items: center;
+
+                }
+            .m-weather{
+                font-size: 65px;
+                text-shadow: 2px 2px 5px gray;
+            }
+            .weather-des{
+                margin-left: 38px;
+                font-size: 40px;
+                text-shadow: 1px 1px 2px gray;
+            }
+            .w-location{
+                font-size: 40px;
+                text-shadow: 1px 1px 2px gray;
+            }
+            .extra-info{
+                padding: 5px;
+                margin-left: 40px;
+                font-size: 15px;
+                display: list-item;
+                list-style: none;
+                color: gray;
+                letter-spacing: 1px;
+            }
+        }
+        .weather-mid{
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            .mid-low-temp{
+                text-shadow: 1px 1px 3px gray;
+                font-size: 20px;
+                .head-temp{
+                    display: flex;
+                    gap: 20px;
+                }
+                .high-low-text{
+                    p{
+                        font-size: 17px;
+                    }
+                }
+            }
+            .presure-temp-div{
+                    margin-left: 50px;
+                    display: flex;
+                    gap: 40px;
+                    position: relative;
+                    .presure-text{
+                        font-size: 20px;
+                        text-shadow: 1px 1px 3px gray;
+                        &:nth-child(2):hover{
+                            cursor: pointer;
+                        }
+                    }
+            }
+        }
+        .today-time{
+            font-size: 60px;
+            text-align: right;
+            text-shadow: 3px 2px 5px gray;
+            .time{
+                font-size: 40px;
+            }
+        }
+    }
+}

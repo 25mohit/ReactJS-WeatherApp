@@ -1,0 +1,26 @@
+.info-main-div{
+    // background-color: orange;
+    pointer-events: none;
+    width: 80vw;
+    height: 80vh;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    .info-container{
+            pointer-events: all;
+            width: fit-content;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 2px solid orange;
+            border-radius: 10px;
+            background-color: rgb(255, 235, 198);
+            .info-message{
+                    color: orange;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+            }
+    }
+}

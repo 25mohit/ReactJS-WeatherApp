@@ -1,0 +1,117 @@
+.weather-widget {
+  width: 100%;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: rgba(250, 250, 250, 0.1);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+}
+
+.weather-widget p {
+  margin: 0;
+  padding: 0;
+}
+
+.weather-widget .container {
+  color: white;
+}
+
+.weather-widget .container .weather-head {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.weather-widget .container .weather-head .js-c {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.weather-widget .container .weather-head .m-weather {
+  font-size: 65px;
+  text-shadow: 2px 2px 5px gray;
+}
+
+.weather-widget .container .weather-head .weather-des {
+  margin-left: 38px;
+  font-size: 40px;
+  text-shadow: 1px 1px 2px gray;
+}
+
+.weather-widget .container .weather-head .w-location {
+  font-size: 40px;
+  text-shadow: 1px 1px 2px gray;
+}
+
+.weather-widget .container .weather-head .extra-info {
+  padding: 5px;
+  margin-left: 40px;
+  font-size: 15px;
+  display: list-item;
+  list-style: none;
+  color: gray;
+  letter-spacing: 1px;
+}
+
+.weather-widget .container .weather-mid {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.weather-widget .container .weather-mid .mid-low-temp {
+  text-shadow: 1px 1px 3px gray;
+  font-size: 20px;
+}
+
+.weather-widget .container .weather-mid .mid-low-temp .head-temp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.weather-widget .container .weather-mid .mid-low-temp .high-low-text p {
+  font-size: 17px;
+}
+
+.weather-widget .container .weather-mid .presure-temp-div {
+  margin-left: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+  position: relative;
+}
+
+.weather-widget .container .weather-mid .presure-temp-div .presure-text {
+  font-size: 20px;
+  text-shadow: 1px 1px 3px gray;
+}
+
+.weather-widget .container .weather-mid .presure-temp-div .presure-text:nth-child(2):hover {
+  cursor: pointer;
+}
+
+.weather-widget .container .today-time {
+  font-size: 60px;
+  text-align: right;
+  text-shadow: 3px 2px 5px gray;
+}
+
+.weather-widget .container .today-time .time {
+  font-size: 40px;
+}
+/*# sourceMappingURL=WeatherWidgets.css.map */
