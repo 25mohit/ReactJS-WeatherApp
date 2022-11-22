@@ -1,13 +1,16 @@
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 import axios from 'axios'
 import './App.css';
 import { WeatherWidgets } from './components/weatherWidget/WeatherWidgets';
+import {TiWeatherPartlySunny} from 'react-icons/ti'
+import { EmptyWeather } from './components/emptyWeather/EmptyWeather';
+
 
 function App() {
   const[city, setCity ] = useState('')
   const [date, setDate] = useState('')
   const [time, setTime] = useState('')
-  var cnt = 6
+
   function formatAMPM(date) {
     var hours = date.getHours();
     var minutes = date.getMinutes();
@@ -34,6 +37,7 @@ function App() {
   var today = new Date()
     const submitHandler = (e) => {
       e.preventDefault()
+      if(city != ''){
       setDate(today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear())
       setTime(formatAMPM(new Date) )
 
@@ -54,25 +58,24 @@ function App() {
           wind_deg:res.data.wind.deg,
           country:""
         })
-        console.log(res.data);
       })
-      axios.get(`http://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&cnt={5}&appid=a501970451ae6b092f85de9eb1f76cdc`)
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((err) => {
-          console.log(err);
-      })
+    }else{
+      alert('Please Enter a City Name ')
+    }
   }
 
   return (
     <div className="App">
       <form>
-          <input type='text' placeholder='enter city' value={ city } onChange={ e => setCity(e.target.value)}/>
-          <button onClick={ submitHandler }>Submit</button>
+          <input type='text' placeholder='enter city' value={ city } onChange={ e => setCity(e.target.value)} autoComplete='false'/>
+          <button onClick={submitHandler} className='submit-div'>
+            <TiWeatherPartlySunny className='icon-bt'/>
+            <p>See Weather</p>
+          </button>
       </form>
-      {/* {  data.temp} */}
+      {data.temp ?
       <WeatherWidgets allData = { data } date={date} time={ time }/>
+      : <EmptyWeather />}
     </div>
   );
 }

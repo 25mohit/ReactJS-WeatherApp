@@ -1,0 +1,26 @@
+.empty-weather-div {
+  position: fixed;
+  width: 90%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.empty-weather-div .empty-container .empty-text {
+  color: white;
+  text-shadow: 3px 2px 5px rgba(19, 19, 19, 0.8);
+  font-size: 7vw;
+}
+
+@media screen and (max-width: 570px) {
+  .empty-weather-div {
+    width: 80%;
+  }
+}
+/*# sourceMappingURL=EmptyWeather.css.map */

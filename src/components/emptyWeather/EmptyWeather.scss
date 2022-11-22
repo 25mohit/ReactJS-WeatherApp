@@ -1,0 +1,19 @@
+.empty-weather-div{
+    position: fixed;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    .empty-container{
+            .empty-text{
+                color: white;
+                text-shadow: 3px 2px 5px rgba(19, 19, 19,0.8);
+                font-size: 7vw;
+            }
+    }
+}
+@media screen and(max-width:570px) {
+        .empty-weather-div{
+            width: 80%;
+        }
+}

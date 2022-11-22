@@ -10,15 +10,72 @@
 }
 input[type=text]{
   padding: 10px;
-  margin-top: 40px;
   border: none;
-  width: 350px;
+  border-radius: 4px;
+  font-size: 18px;
+  width: 20vw;
+  min-width: 200px;
+  outline: none;
+}
+input[type=text]::placeholder{
+  font-size: 14px;
+  padding-left: 5px;
+  color: rgb(178, 178, 178);
+}
+input[type=text]:focus{
+  outline: 3px solid rgba(255, 167, 3,0.6);
 }
 button{
-  border: 1px solid rgb(181, 181, 181);
+  border: none;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
   padding: 10px;
   margin-left: 3px;
+  font-size: 18px;
 }
 button:hover{
   cursor: pointer;
+}
+form{
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.submit-div{
+  display: flex;
+  height: fit-content;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: orange;
+  width: fit-content;
+  align-items: center;
+  border-radius: 4px;
+  user-select: none;
+}
+.submit-div:hover{
+  cursor: pointer;
+  background-color: rgb(190, 123, 0);
+  transition: 0.6s;
+}
+.submit-div p{
+  margin: 0;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 0;
+}
+.submit-div .icon-bt{
+  color: white;
+  font-size: 20px;
+  margin-right: 5px;
+}
+@media screen and (max-width: 820px) {
+ .App{
+  height: fit-content;
+  min-height: 100vh;
+  padding-bottom: 50px;
+ }
 }
